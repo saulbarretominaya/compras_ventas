@@ -1,0 +1,42 @@
+print_r($abreviatura);
+var_dump($precio_costo_replace);
+$numero = str_replace(',', '', $número); 
+echo "<script>console.log('Imprimiendo: " . json_encode($detalle) . "');</script>";
+
+
+Codigo de Mysql
+SELECT FORMAT(12000.50,2); => Formatear en miles y redondear con 2 decimal en MySQL
+SELECT LEFT('Hola Brando',2) => Muestra los caracteres de un parrafo
+SELECT UPPER('Holaaa'); => Pone en mayuscula
+
+
+JavaScript
+var xxx = precio_costo.replace(",", "");
+var xxx = precio_costo.replaceAll(",", "");
+
+Funcion para validar solo numeros enteros
+$("#porcentaje").on({
+	"focus": function (event) {
+		$(event.target).select();
+	},
+	"keyup": function (event) {
+		$(event.target).val(function (index, value) {
+			return value.replace(/\D/g, "")
+			// .replace(/([0-9])([0-9]{2})$/, '$1.$2');
+			// .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+		});
+	}
+});
+Funcion para validar solo numeros enteros sin el 0
+$("#cantidad").on({
+	"focus": function (event) {
+		$(event.target).select();
+	},
+	"keyup": function (event) {
+		$(event.target).val(function (index, value) {
+			return value.replace(/\D/g, "")
+				.replace(/^0*/, '');
+			// .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+		});
+	}
+});

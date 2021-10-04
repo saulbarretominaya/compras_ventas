@@ -1,0 +1,357 @@
+﻿/*******************************
+*********** GENERAL ************
+*******************************/
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #f8f9fa;
+    padding-top: 80px;
+    height: 100%;
+    padding: 0;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+*{
+    box-sizing: border-box;
+}
+/****************************************************
+*********** ESTILO DEL SCROLL DE LA VENTANA *********
+*****************************************************/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 0;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    height: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+    background-color: rgb(177, 177, 177);
+}
+
+/*******************************
+*********** FORMULARIO *********
+********************************/
+.frm{
+ padding: 0; margin: 0
+}
+.frm-control{
+    display: block;
+    width: 100%;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;    
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5; 
+}
+.frm-control:focus {
+    color: #495057;
+    background-color: #f8fbff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/******************************************
+**************** BOTONES ******************
+*******************************************/
+.btn{
+    font-size: 0.9rem;
+    padding: 0.5em 1.5em;
+    margin: 0.1rem;
+    border: 0;
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    font-size: 1.3rem;
+    display: block;
+    width: 100%;
+    background-color: #008CBA;
+    color: #fff;
+}
+
+/******************************************
+************ EFECTO BOTON *****************
+*******************************************/
+.btn-eff-1{
+    overflow: hidden;
+}
+.btn-eff-1 .ripple{
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+/******************************************
+**************** PRECARGA *****************
+*******************************************/
+.preload{
+    z-index: 1031;
+    height: 100%;
+    width: 100%;
+    /*background-color: rgba(255, 255, 255, 0.5); */
+    position: fixed;
+    background-image: url("../../img/loader.gif"), url("../../img/preload.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/******************************************
+************ GENERAL PÁGINA ***************
+*******************************************/
+.container-login-g{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment:fixed;
+    background-size: cover;
+    display: none;
+}
+.container-login-g1{
+    background-image: url('../login/img/bckg1.jpg');    
+}
+.container-login-g2{
+    background-image: url('../login/img/bckg2.jpg');
+}
+.container-login-g3{
+    background-image: url('../login/img/bckg3.jpg');    
+}
+.container-login-c{
+    position: fixed;    
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+.container-login{
+    max-width: 30rem;
+    height: 100%;
+    margin: 0 auto;
+    display: none;
+    padding: 0.1rem 2rem;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+
+.login-logo{
+    text-align: center;
+    padding-top: 1rem;
+}
+.login-title{
+    text-align: center;
+    color: black;
+    font-size: 1.8rem;
+    padding: 1.5rem 0.5rem 3rem;  
+}
+.login-user-photo{
+    background: #333333;
+    height: 5rem;
+    width: 5rem;    
+    border-radius: 2.5rem;
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    margin-left: -2.5rem;
+    text-align: center;
+    line-height: 5rem;
+}
+.login-user-photo img{
+    vertical-align: middle;
+}
+.login-form{
+    position: relative;
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(255,255,255,0.5));
+    padding: 4rem 1rem 4rem 1rem;
+    border-top: rgba(255,255,255,0.8) solid 1px;
+}
+
+/************************************
+************ Alertas ****************
+*************************************/
+.eDialog-v1-bg {
+  background: #FFF;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -khtml-opacity: .90;
+  -moz-opacity: .90;
+  -ms-filter: "alpha(opacity=90)";
+  filter: alpha(opacity=90);
+  opacity: .90; }
+
+.eDialog-v1-contg {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 30%;
+  width: 100%; }
+
+.eDialog-v1-cont {
+  position: relative;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #1fb2da;
+  border-top: #FFF solid 1px;
+  box-shadow: 0px 4px 3px #999; }
+
+.eDialog-v1-cont-text {
+  padding: 1.5rem;
+  text-align: center; }
+  .eDialog-v1-cont-text h2 {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: normal;
+    color: #343738;
+    font-size: 1.5em;
+    margin: 0.1rem; }
+  .eDialog-v1-cont-text p {
+    color: #FFF;
+    margin: 0.6rem;
+    font-size: 1.3em;
+    padding-bottom: 1rem; }
+  .eDialog-v1-cont-text button {
+    background: #1dbeea;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1em;
+    border: #FFF solid 1px;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    color: #FFF; }
+  .eDialog-v1-cont-text button:hover {
+    -khtml-opacity: .85;
+    -moz-opacity: .85;
+    -ms-filter: "alpha(opacity=85)";
+    filter: alpha(opacity=85);
+    opacity: .85; }
+
+.eDialog-v1-icon {
+  position: absolute;
+  top: -2.4rem;
+  left: 47.5%;
+  background: #FFF;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 58px;
+  height: 58px;
+  padding: 6px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px; }
+
+/************************************
+************* POPUP ****************
+*************************************/
+.popup-fondo {
+    background: #000;
+    opacity: 0.7;
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:10;
+}
+.popup-contenedor {
+    position: fixed;    
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;    
+    text-align: center
+}
+.popup-cuerpo {
+    position:relative;
+    box-shadow: 0 0 72px #000;
+    -moz-box-shadow: 0 0 72px #000;
+    display: inline-block;
+    font-size: 13px;
+    max-width: 50rem;
+    background: #fff;
+    margin: 0 auto;
+    padding: 8rem 1rem 1rem 1rem;
+}
+
+.popup-cerrar {
+    position: absolute;
+    top:-0.5rem;
+    right:-0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor:pointer;
+    border: #fff solid 2px;
+    border-radius: 1.25rem;
+    line-height: 2rem;
+}
+
+#popup {
+    display: none;
+}
+/************************************
+*************************************
+*************************************/
