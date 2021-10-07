@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Personal
+                    <h1>Empleados
                         <a href="<?php echo base_url(); ?>Recursos_humanos/Controller_personal/enlace_insertar" class="btn btn-primary btn-sm">REGISTRAR</a>
                     </h1>
                 </div>

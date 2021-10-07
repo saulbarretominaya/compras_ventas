@@ -14,9 +14,8 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="" class="nav-link">
-              <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
               <i class="fas fa-users"></i>
               <p>
                 Recursos Humanos
@@ -31,18 +30,18 @@
               </li>
               <li class="nav-item">
                 <a href="<?php echo base_url() . "Recursos_humanos/Controller_personal" ?>" class="nav-link"> <i class="far fa-circle nav-icon"></i>
-                  <p>Personal</p>
+                  <p>Empleados</p>
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
 
 
           <li class="nav-item">
             <a href="" class="nav-link">
               <i class="fas fa-boxes"></i>
               <p>
-                Inventario
+                Almacen
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -64,7 +63,7 @@
             <a href="" class="nav-link">
               <i class="fas fa-user-cog"></i>
               <p>
-                Administracion
+                Accesos
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -74,9 +73,13 @@
                   <p>Usuarios</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url() . "Recursos_humanos/Controller_personal" ?>" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+                  <p>Empleados</p>
+                </a>
+              </li>
             </ul>
           </li>
-
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Personal
+                    <h1>Empleados
                         <button type="button" class="btn btn-primary btn-sm btn_registrar">REGISTRAR</button>
                         <a href="<?php echo base_url(); ?>Recursos_humanos/Controller_personal" class="btn btn-danger btn-sm">CANCELAR</a>
                     </h1>

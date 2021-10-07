@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <section class="content-header">
         <h1>
-            BIENVENIDO AL SISTEMA DE VENTAS
+            BIENVENIDO AL SISTEMA DE COMPRA Y VENTAS
             <small></small>
         </h1>
     </section>
